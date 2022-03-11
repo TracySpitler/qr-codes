@@ -17,5 +17,9 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(cors());
 
+// routes
+const index = require('./api/routes/index');
+app.use('/', index);
+
 // export the app
 module.exports = app;
