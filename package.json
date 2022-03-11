@@ -1,0 +1,19 @@
+{
+  "name": "qr-codes",
+  "version": "1.0.0",
+  "description": "A dynamic QR code web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TracySpitler/qr-codes.git"
+  },
+  "author": "TSpitler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TracySpitler/qr-codes/issues"
+  },
+  "homepage": "https://github.com/TracySpitler/qr-codes#readme"
+}
