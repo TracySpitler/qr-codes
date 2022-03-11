@@ -1,0 +1,20 @@
+// if the app environment is not set, default to development
+var NODE_ENV = process.env.NODE_ENV || 'development';
+
+// use dotenv to load our env vars in the .env, into process.env
+if (NODE_ENV === 'development') {
+  require('dotenv').config();
+}
+
+// include
+const app = require('../server');
+const http = require('http');
+
+// setup the port
+const port = process.env.PORT || 3000;
+app.set('port', port)
+
+// create HTTP server - once up, print to console
+const server = http.createServer(app);
+server.listen(port)
+server.on('listening', () => console.log('Server running on: '+port))
