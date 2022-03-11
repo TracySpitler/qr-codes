@@ -21,5 +21,12 @@ app.use(cors());
 const index = require('./api/routes/index');
 app.use('/', index);
 
+// 404 error handling
+app.use(function(req, res, next) {
+  if (!req.route)
+    res.status(404).send('Uh Oh! 404 Error.');
+  return;
+});
+
 // export the app
 module.exports = app;
