@@ -9,6 +9,9 @@ const cors = require("cors");
 // initialize express
 const app = express();
 
+// connect to the database
+const db = require('./config/mongoose');
+
 // middleware
 app.use(bodyParser.json());
 app.use(morgan("dev"));
